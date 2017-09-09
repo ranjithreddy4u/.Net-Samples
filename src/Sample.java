@@ -1,13 +1,16 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.testng.Assert;
+
+import com.gargoylesoftware.htmlunit.BrowserVersion;
 
 
 public class Sample {
 
 	
 	public static void main(String[] args) {
-		FirefoxDriver driver=new FirefoxDriver();
+		HtmlUnitDriver driver=new HtmlUnitDriver(BrowserVersion.FIREFOX_38);
 		driver.get("http://192.168.60.41:8080/qaenv");
 		String exptext="Hello, World!";
 		String acttext=driver.findElement(By.xpath("html/body")).getText();
