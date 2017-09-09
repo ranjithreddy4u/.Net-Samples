@@ -8,7 +8,7 @@ public class Sample {
 	
 	public static void main(String[] args) {
 		FirefoxDriver driver=new FirefoxDriver();
-		driver.get("http://localhost:8899/webapp");
+		driver.get("http://192.168.60.41:8080/qaenv");
 		String exptext="Hello, World!";
 		String acttext=driver.findElement(By.xpath("html/body")).getText();
 		System.out.println("Expected text : "+exptext);
